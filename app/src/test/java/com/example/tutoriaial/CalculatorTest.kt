@@ -51,5 +51,13 @@ class CalculatorTest {
 
     @Test
     fun method() {
+        val sut = intArrayOf(3, 1, 4)
+        assertThat(sut)
+            .hasSize(3)
+            .doesNotContain(2)
+        assertThat(sut[0]).isEqualTo(3)
+        assertThat(sut[1]).isPositive
+        assertThat(sut[2]).isLessThanOrEqualTo(4)
     }
+
 }
